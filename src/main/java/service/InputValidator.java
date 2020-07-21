@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class InputValidator {
 
-    Scanner scanner = new Scanner(System.in);
     String parsedItem;
+
+    Scanner scanner = new Scanner(System.in);
 
     public String inputValidator(String prompt) {
 
@@ -39,8 +40,8 @@ public class InputValidator {
         System.out.println(prompt);
 
         while (!valid) {
-            if (scanner.hasNext("[1-9]")) {
-                parsedItem = scanner.next("[1-9]");
+            if (scanner.hasNext("[1-9]*")) {
+                parsedItem = scanner.next("[1-9]*");
                 valid = true;
             } else {
                 System.out.println("Invalid Input, try again...");
